@@ -31,8 +31,8 @@
                 <ul id="nav">
                   <li><a class="nav-link {{ ($title === "E-ASKADUTA | Dashboard") ? 'active' : '' }}" href='/'>Dashboard</a></li>
                   <li><a class="nav-link {{ ($title === "E-ASKADUTA | Tentang Kami") ? 'active' : '' }}" href='/tentang'>Tentang kami</a></li>
-                  {{-- <li><a class="nav-link {{ ($title === "E-ASKADUTA | FORMASI") ? 'active' : '' }}" href='/formasi'>Formasi</a></li> --}}
-                  <li><a class="nav-link {{ ($title === "E-ASKADUTA | FORMASI") ? 'active' : '' }}" href='/oops'>Formasi</a></li>
+                  <li><a class="nav-link {{ ($title === "E-ASKADUTA | FORMASI") ? 'active' : '' }}" href='/formasi'>Formasi</a></li>
+                  {{-- <li><a class="nav-link {{ ($title === "E-ASKADUTA | FORMASI") ? 'active' : '' }}" href='/oops'>Formasi</a></li> --}}
                   <li><a>Respon Aspirasi</a>
                         <ul class="dropdown">
                           <li><a class="nav-link {{ ($title === "E-ASKADUTA | Respon Aspirasi 2023") ? 'active' : '' }}" href='/respon2023'>- ASKADUTA | 2023</a>
@@ -64,8 +64,8 @@
                     @auth
                       <li><a>Selengkapnya</a>
                         <ul class="dropdown">
-                          {{-- <li><a href='/aspirasisaya'>- Aspirasi Saya</a></li> --}}
-                          <li><a href='/oops'>- Aspirasi Saya</a></li>
+                          <li><a href='/aspirasisaya'>- Aspirasi Saya</a></li>
+                          {{-- <li><a href='/oops'>- Aspirasi Saya</a></li> --}}
                           <li>
                             <form action="{{ route('logout') }}" method="POST">
                               @csrf

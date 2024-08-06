@@ -22,6 +22,8 @@ Route::get('/', [LoginController::class, 'dashboard'])->name('dashboard');
 
 Route::get('/login', [LoginController::class, 'login'])->name('login')->middleware('guest');
 Route::post('/authenticate', [LoginController::class, 'authenticate'])->name('authenticate');
+Route::get('/loginx', [LoginController::class, 'loginKelasX'])->name('login.kelasx')->middleware('guest');
+Route::post('/authenticateKelasX', [LoginController::class, 'authenticateKelasX'])->name('authenticate.kelasx');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout')->middleware('auth');
 
 Route::get('/tentang', [MainController::class, 'about'])->name('about');

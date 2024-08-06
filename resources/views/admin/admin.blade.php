@@ -56,25 +56,35 @@
                                         <div class="tab-pane fade show active" role="tabpanel">
                                             <div class="table-responsive">
                                                 <table class="dbkit-table">
-                                                    <tr class="heading-td">
-                                                        <td class="mv-icon">No</td>
-                                                        <td class="coin-name">Aspirasi</td>
-                                                        <td class="buy">Pihak Yang Dituju</td>
-                                                        <td class="sell">Progres</td>
-                                                        <td class="stats-chart">Action</td>
-                                                    </tr>
-                                                    @foreach ($aspirasis as $aspirasi)
-                                                        <tr>
-                                                            <td>{{ $loop->iteration }}</td>
-                                                            <td>{{ $aspirasi->aspirasi }}</td>
-                                                            <td>{{ $aspirasi->pihak }}</td>
-                                                            <td>{{ $aspirasi->tanggapan }}</td>
-                                                            <td>
-                                                                <a href="/admin/{{ $aspirasi->id }}" class="badge bg-info">Lihat</a>
-                                                                <a href="/admin/{{ $aspirasi->id }}/edit" class="badge bg-warning">Edit</a>
-                                                            </td>
+                                                    <thead>
+                                                        <tr class="heading-td ">
+                                                            <th class="mv-icon">No</th>
+                                                            <th class="coin-name">Aspirasi</th>
+                                                            <th class="buy">Pihak Yang Dituju</th>
+                                                            <th class="sell">Aspirator</th>
+                                                            <th class="stats-chart">Action</th>
                                                         </tr>
-                                                    @endforeach
+                                                    </thead>
+                                                    <tbody>
+                                                        @foreach ($aspirasis as $aspirasi)
+                                                            <tr>
+                                                                <td>{{ $loop->iteration }}</td>
+                                                                <td>{{ $aspirasi->aspirasi }}</td>
+                                                                <td>{{ $aspirasi->pihak }}</td>
+                                                                <td>
+                                                                    @php
+                                                                        $nameParts = explode(' ', $aspirasi->user->name);
+                                                                        $shortName = implode(' ', array_slice($nameParts, 0, 2));
+                                                                        echo $shortName;
+                                                                    @endphp
+                                                                </td>
+                                                                <td>
+                                                                    <a href="/admin/{{ $aspirasi->id }}" class="badge bg-info"><i class="fa-regular fa-eye"></i></a>
+                                                                    <a href="/admin/{{ $aspirasi->id }}/edit" class="badge bg-warning"><i class="fa-regular fa-pen-to-square"></i></a>
+                                                                </td>
+                                                            </tr>
+                                                        @endforeach
+                                                    </tbody>
                                                 </table>
                                             </div>
                                         </div>
@@ -84,40 +94,5 @@
                         </div>
                     </div>
                 </div>
-                <!-- row area end -->
-                <div class="row mt-5">
-                    <!-- latest news area start -->
-                    <div class="col-xl-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="header-title">Latest News</h4>
-                                <div class="letest-news mt-5">
-                                    <div class="single-post mb-xs-40 mb-sm-40">
-                                        <div class="lts-thumb">
-                                            <img src="/public/assets/images/blog/post-thumb1.jpg" alt="post thumb">
-                                        </div>
-                                        <div class="lts-content">
-                                            <span>Admin Post</span>
-                                            <h2><a href="blog.html">Sed ut perspiciatis unde omnis iste.</a></h2>
-                                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some...</p>
-                                        </div>
-                                    </div>
-                                    <div class="single-post">
-                                        <div class="lts-thumb">
-                                            <img src="/public/assets/images/blog/post-thumb2.jpg" alt="post thumb">
-                                        </div>
-                                        <div class="lts-content">
-                                            <span>Admin Post</span>
-                                            <h2><a href="blog.html">Sed ut perspiciatis unde omnis iste.</a></h2>
-                                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some...</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- latest news area end -->
-                </div>
-                <!-- row area start-->
             </div>
 @endsection

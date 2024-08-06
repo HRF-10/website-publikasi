@@ -921,54 +921,45 @@ ul.breadcrumbs {
 
 table.dbkit-table {
     width: 100%;
+    border-collapse: collapse;
 }
 
-table.dbkit-table tr {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    height: 71px;
-    border: 1px solid transparent;
-    padding: 0 30px;
-    margin: 20px 2px 6px;
+table.dbkit-table thead tr {
     background: #f5f8f9;
 }
 
-table.dbkit-table tr th,
-table.dbkit-table tr td {
-    border-top: none!important;
+table.dbkit-table thead tr th {
+    padding: 15px;
+    text-align: center;  /* Menyelaraskan teks ke tengah */
+    vertical-align: middle;  /* Menyelaraskan teks secara vertikal ke tengah */
+    border: 1px solid #ddd;
 }
 
-table.dbkit-table tr:hover {
-    border-color: #e4e2f5;
+table.dbkit-table tbody tr td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
 }
 
-table.dbkit-table tr td {
+table.dbkit-table tbody tr:hover {
+    background: #f1f1f1;
+}
+
+table.dbkit-table tbody tr td {
     font-size: 16px;
     font-weight: 400;
-    letter-spacing: 0;
     color: #616161;
-    min-width: 141px;
 }
 
 .mv-icon img {
     max-width: 29px;
 }
 
-.trends {
+.trends, .stats-chart {
     text-align: center;
 }
 
 .stats-chart {
-    text-align: center;
     max-width: 75px;
 }
 
@@ -979,6 +970,26 @@ table.dbkit-table tr td {
 .buy img,
 .sell img {
     margin-left: 10px;
+}
+
+.badge {
+    padding: 5px 10px;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.badge.bg-info {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.badge.bg-warning {
+    background-color: #ffc107;
+    color: white;
+}
+
+.badge i {
+    color: white;
 }
 
 /*-------------------- END Market value ------------------- */

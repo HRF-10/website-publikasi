@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Respon;
+use App\Models\About;
 
 class FormController extends Controller
 {
@@ -15,9 +15,9 @@ class FormController extends Controller
     public function index()
     {
         $title = "E-ASKADUTA | FORMASI";
-        $respons = Respon::all();
+        $abouts = About::all();
         
-        return view('Formasi.formasi', compact('title', 'respons'));
+        return view('Formasi.formasi', compact('title', 'abouts'));
     }
 
     /**

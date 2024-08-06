@@ -22,6 +22,7 @@ class AdminController extends Controller
         if ($start_date && $end_date) {
         $aspirasis = Aspirasi::whereDate('created_at', '>=', $start_date)
                             ->whereDate('created_at', '<=', $end_date)
+                            ->with('user')
                             ->paginate(20);
         } else {
             $aspirasis = Aspirasi::paginate(20);

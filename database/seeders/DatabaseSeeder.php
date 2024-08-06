@@ -27,14 +27,13 @@ class DatabaseSeeder extends Seeder
         //     ],
         // ]);
 
-        Respon::on('mysql')->insert([
-            [
-                'title' => 'eFORASI',
-                'tahun' => '2024',
-                'excerpt' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis quo natus explicabo consectetur molestias debitis doloremque voluptatum. Odio rerum consectetur veritatis animi, voluptas reiciendis voluptatum vero neque architecto, repudiandae modi delectus magni quos consequuntur id.',
-                'body' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis quo natus explicabo consectetur molestias debitis doloremque voluptatum. Odio rerum consectetur veritatis animi, voluptas reiciendis voluptatum vero neque architecto, repudiandae modi delectus magni quos consequuntur id. Impedit, minima natus. Odit reprehenderit qui aliquid nobis laboriosam, praesentium fugiat, debitis nihil labore dolore eius, nisi placeat ipsa modi? Praesentium quidem consequuntur beatae ducimus blanditiis nisi fugit velit mollitia sequi maxime quaerat, quis error unde non neque reiciendis temporibus facere consequatur quod sed iure alias aliquid autem quas! Obcaecati aspernatur amet placeat quod doloribus fuga, reiciendis explicabo impedit sed magnam animi ea iste quas!'
-            ],
-        ]);
+        // About::on('mysql')->insert([
+        //     [
+        //         'title' => 'Form Aspirasi',
+        //         'excerpt' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis quo natus explicabo consectetur molestias debitis doloremque voluptatum. Odio rerum consectetur veritatis animi, voluptas reiciendis voluptatum vero neque architecto, repudiandae modi delectus magni quos consequuntur id.',
+        //         'body' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis quo natus explicabo consectetur molestias debitis doloremque voluptatum. Odio rerum consectetur veritatis animi, voluptas reiciendis voluptatum vero neque architecto, repudiandae modi delectus magni quos consequuntur id. Impedit, minima natus. Odit reprehenderit qui aliquid nobis laboriosam, praesentium fugiat, debitis nihil labore dolore eius, nisi placeat ipsa modi? Praesentium quidem consequuntur beatae ducimus blanditiis nisi fugit velit mollitia sequi maxime quaerat, quis error unde non neque reiciendis temporibus facere consequatur quod sed iure alias aliquid autem quas! Obcaecati aspernatur amet placeat quod doloribus fuga, reiciendis explicabo impedit sed magnam animi ea iste quas!'
+        //     ],
+        // ]);
 
         // About::on('mysql2')->create([
         //     'title' => 'Respon Aspirasi',
@@ -42,11 +41,32 @@ class DatabaseSeeder extends Seeder
         //     'body' => 'Selamat Datang! Halaman ini akan menampilkan seluruh respon aspirasi dari pihak terkait atas aspirasi yang telah dikirimkan oleh para siswa/siswi. Aspirasi yang ditampilkan mulai dari aspirasi lama sampai dengan yang paling terbaru. Kami sangat mengapresiasi aspirasi dan harapan yang telah siswa/siswi sampaikan kepada kami untuk kemudian diteruskan kepada pihak yang bersangkutan.',
         // ]);
 
+        User::on('mysql')->insert([
+            [
+                'name' => 'Miyu Mizuno',
+                'nis' => '24.1',
+                'kelas' => 'X PPLG A',
+                'is_admin' => '0'
+            ],
+            [
+                'name' => 'Reina Mizuno',
+                'nis' => '24.2',
+                'kelas' => 'X PPLG B',
+                'is_admin' => '0'
+            ],
+            [
+                'name' => 'Grace Oktaviani',
+                'nis' => '24.3',
+                'kelas' => 'X DPIB A',
+                'is_admin' => '0'
+            ],
+        ]);
+
     //    User::on('mysql')->create([
     //         'name' => 'Admin',
     //         'nis' => '22.23',
-    //         'kelas' => '-',
-    //         'is_admin' => '1'
+    //         'kelas' => 'X PPLG A',
+    //         'is_admin' => '0'
     //    ]);
     }
 }

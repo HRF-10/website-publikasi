@@ -74,10 +74,10 @@
                       <div class="line"></div>
                   </div>
             </div>
-            @foreach ($respons as $respon)
-              @if ($respon->id == 1)
+            @foreach ($abouts as $about)
+              @if ($about->id == 3)
                 <article>
-                  <p>{{ $respon->body }}</p>
+                  <p>{{ $about->body }}</p>
                 </article>
               @endif
             @endforeach

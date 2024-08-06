@@ -82,20 +82,20 @@
           {{ session('error_message') }}
         </div>
       @endif
-      <form action="{{ route('authenticate') }}" method="POST">
+      <form action="{{ route('authenticate.kelasx') }}" method="POST">
         @csrf
         <div class="form-floating">
           <input type="text" name="name" class="form-control" id="name" placeholder="name" value="{{ old('name') }}" required>
           <label for="name">Nama Lengkap Siswa</label>
         </div>
         <div class="form-floating">
-          <input type="text" name="nis" class="form-control" id="nis" placeholder="nis" value="{{ old('nis') }}" required>
-          <label for="nis">NIS</label>
-          <small class="keterangan">Format: 22.010123</small>
+          <input type="text" name="kelas" class="form-control" id="kelas" placeholder="kelas" value="{{ old('kelas') }}" required>
+          <label for="kelas">Kelas dan Jurusan</label>
+          <small class="keterangan">Contoh: x pplg a</small>
         </div>
         <button class="btn btn-primary w-100 py-2 mt-4" type="submit">Login</button>
         <div class="text-right mt-3 mr-3">
-          <a href="/loginx">Kelas X?</a>
+          <a href="/login">Kembali</a>
         </div>
       </form>
     </div>
